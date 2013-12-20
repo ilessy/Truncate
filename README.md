@@ -26,6 +26,6 @@ The native Twig filters split, join, and slice can be used to achieve a similar 
 - [split](http://twig.sensiolabs.org/doc/filters/split.html)
 
 ```php
-{% set words = "these are words"|split(" ")|slice(1, 2)|join(" ") %}  
-{{ words }}
+{% set words = "these are words"|split(" ")|slice(0, 100)|join(" ")|raw %}  
+<p>{{ words }}</p>
 ```
